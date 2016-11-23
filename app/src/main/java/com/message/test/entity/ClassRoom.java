@@ -17,10 +17,13 @@ public class ClassRoom {
     
     private String className;
 
-    @Generated(hash = 1376434727)
-    public ClassRoom(String id, String className) {
+    private Long  creatTime;
+
+    @Generated(hash = 1612720215)
+    public ClassRoom(String id, String className, Long creatTime) {
         this.id = id;
         this.className = className;
+        this.creatTime = creatTime;
     }
 
     @Generated(hash = 437777384)
@@ -49,5 +52,13 @@ public class ClassRoom {
                 "id='" + id + '\'' +
                 ", className='" + className + '\'' +
                 '}';
+    }
+
+    public Long getCreatTime() {
+        return this.creatTime;
+    }
+
+    public void setCreatTime(Long creatTime) {
+        this.creatTime = creatTime;
     }
 }

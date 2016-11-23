@@ -1,6 +1,7 @@
 package com.message.test.dao.base;
 
 import com.message.test.MyApplication;
+import com.message.test.dao.ClassRoomQuery;
 import com.message.test.dao.NoteQuery;
 import com.message.test.entity.ClassRoomDao;
 import com.message.test.entity.DaoMaster;
@@ -18,6 +19,7 @@ public class Operate {
     private static DaoSession daoSession;
 
     private NoteQuery noteQuery;
+    private ClassRoomQuery classRoomQuery;
 
 
     public static Operate getInstance() {
@@ -58,6 +60,13 @@ public class Operate {
 
     public ClassRoomDao getClassRoomDao(){
         return daoSession.getClassRoomDao();
+    }
+
+    public ClassRoomQuery getClassRoomQuery(){
+        if(classRoomQuery == null){
+            classRoomQuery = new ClassRoomQuery(daoSession.getClassRoomDao());
+        }
+        return classRoomQuery;
     }
 
 }
