@@ -3,6 +3,7 @@ package com.message.test.entity;
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
+import org.greenrobot.greendao.annotation.Property;
 
 /**
  * Created by shengjunhao on 16/11/15.

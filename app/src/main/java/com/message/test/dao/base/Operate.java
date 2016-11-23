@@ -2,6 +2,7 @@ package com.message.test.dao.base;
 
 import com.message.test.MyApplication;
 import com.message.test.dao.NoteQuery;
+import com.message.test.entity.ClassRoomDao;
 import com.message.test.entity.DaoMaster;
 import com.message.test.entity.DaoSession;
 import com.message.test.entity.NoteDao;
@@ -55,5 +56,8 @@ public class Operate {
     }
 
 
+    public ClassRoomDao getClassRoomDao(){
+        return daoSession.getClassRoomDao();
+    }
 
 }
