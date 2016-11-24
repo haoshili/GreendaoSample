@@ -3,6 +3,8 @@ package com.message.test.dao;
 import com.message.test.entity.ClassRoom;
 import com.message.test.entity.ClassRoomDao;
 
+import org.greenrobot.greendao.annotation.Property;
+
 import java.util.List;
 
 /**

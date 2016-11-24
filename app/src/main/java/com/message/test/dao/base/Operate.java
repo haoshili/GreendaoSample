@@ -3,10 +3,12 @@ package com.message.test.dao.base;
 import com.message.test.MyApplication;
 import com.message.test.dao.ClassRoomQuery;
 import com.message.test.dao.NoteQuery;
+import com.message.test.dao.StudentQuery;
 import com.message.test.entity.ClassRoomDao;
 import com.message.test.entity.DaoMaster;
 import com.message.test.entity.DaoSession;
 import com.message.test.entity.NoteDao;
+import com.message.test.entity.StudentDao;
 
 /**
  * Created by shengjunhao on 16/11/15.
@@ -20,6 +22,7 @@ public class Operate {
 
     private NoteQuery noteQuery;
     private ClassRoomQuery classRoomQuery;
+    private StudentQuery studentQuery;
 
 
     public static Operate getInstance() {
@@ -58,15 +61,35 @@ public class Operate {
     }
 
 
-    public ClassRoomDao getClassRoomDao(){
+    /**
+     * 班级
+     *
+     * @return
+     */
+    public ClassRoomDao getClassRoomDao() {
         return daoSession.getClassRoomDao();
     }
 
-    public ClassRoomQuery getClassRoomQuery(){
-        if(classRoomQuery == null){
+    public ClassRoomQuery getClassRoomQuery() {
+        if (classRoomQuery == null) {
             classRoomQuery = new ClassRoomQuery(daoSession.getClassRoomDao());
         }
         return classRoomQuery;
     }
 
+    /**
+     * 学生
+     *
+     * @return
+     */
+    public StudentDao getStudentDao() {
+        return daoSession.getStudentDao();
+    }
+
+    public StudentQuery getStudentQuery() {
+        if (studentQuery == null) {
+            studentQuery = new StudentQuery(daoSession.getStudentDao());
+        }
+        return studentQuery;
+    }
 }
