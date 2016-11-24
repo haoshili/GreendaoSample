@@ -7,8 +7,12 @@ import com.message.test.dao.StudentQuery;
 import com.message.test.entity.ClassRoomDao;
 import com.message.test.entity.DaoMaster;
 import com.message.test.entity.DaoSession;
+import com.message.test.entity.ImageDao;
+import com.message.test.entity.JoinImageToWeb;
+import com.message.test.entity.JoinImageToWebDao;
 import com.message.test.entity.NoteDao;
 import com.message.test.entity.StudentDao;
+import com.message.test.entity.WebSiteDao;
 
 /**
  * Created by shengjunhao on 16/11/15.
@@ -91,5 +95,17 @@ public class Operate {
             studentQuery = new StudentQuery(daoSession.getStudentDao());
         }
         return studentQuery;
+    }
+
+    public ImageDao getImageDao() {
+        return daoSession.getImageDao();
+    }
+
+    public WebSiteDao getWebSiteDao() {
+        return daoSession.getWebSiteDao();
+    }
+
+    public JoinImageToWebDao getJoinImaageToWebDao() {
+        return daoSession.getJoinImageToWebDao();
     }
 }
